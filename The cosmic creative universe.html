@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#05070f">
+<title>The Design Loop | Web design, graphics and video editing by Ansh</title>
+<meta name="description" content="Portfolio of Ansh: websites, graphic design, reels and video editing, and content creation.">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bar"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a class="brand" href="#home"><img src="logo.jpg" alt="" width="40" height="40"><span>The Design Loop</span></a>
+  <button id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i></button>
+  <nav id="menu" aria-label="Main">
+    <a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a>
+    <a href="#facts">Space</a><a href="#process">Process</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<!-- 1. LAUNCHPAD -->
+<section id="home" class="hero">
+  <div class="planet" aria-hidden="true"><i class="ring r1"></i><i class="ring r2"></i><i class="sat"></i></div>
+  <div class="hero-in">
+    <p class="label">Independent digital creator</p>
+    <h1>Creative ideas. Infinite possibilities.</h1>
+    <p class="lead">I design websites, craft visual identities, edit engaging videos, and create digital content that helps ideas stand out.</p>
+    <p class="cycle" aria-hidden="true"><span class="on">Web Experiences</span><span>Visual Identities</span><span>Reels &amp; Video Editing</span><span>Digital Content</span></p>
+    <div class="cta"><a class="btn pri" href="#work">Explore My Work</a><a class="btn" href="#contact">Launch a Project</a></div>
+  </div>
+  <a class="scroll" href="#universe" aria-label="Scroll down"><i></i></a>
+</section>
+
+<!-- 2. SOLAR SYSTEM -->
+<section id="universe" class="sec">
+  <p class="label">Explore my creative universe</p>
+  <h2>Four planets, four ways I can help</h2>
+  <p class="sub">Hover, tap or focus a planet to learn what I offer.</p>
+  <div class="ss" id="ss"><div class="sun" aria-hidden="true"></div></div>
+  <div class="info card" id="pinfo" aria-live="polite"></div>
+</section>
+
+<!-- 3. ABOUT -->
+<section id="about" class="sec two">
+  <div>
+    <p class="label">Mission briefing</p>
+    <h2>Meet the Creator Behind the Mission</h2>
+    <!-- EDIT: your introduction -->
+    <p>I'm Ansh, the creator behind The Design Loop. I'm learning and building in public: websites, visuals and short videos, one project at a time.</p>
+    <p>This portfolio grows as I do. The projects below are labelled as concept or practice work until I replace them with finished projects.</p>
+    <dl class="panel card" id="panel"></dl>
+  </div>
+  <div class="bd"><img src="logo.jpg" alt="The Design Loop logo"><i class="sat"></i><i class="sat b"></i></div>
+</section>
+
+<!-- 4. SERVICES -->
+<section id="services" class="sec">
+  <p class="label">Orbiting skills</p>
+  <h2>Services</h2>
+  <div class="grid" id="cards"></div>
+</section>
+
+<!-- 5. PROJECTS -->
+<section id="work" class="sec">
+  <p class="label">Mission log</p>
+  <h2>Selected Missions</h2>
+  <p class="sub">A collection of digital experiments, concepts, and creative work.</p>
+  <div class="filters" role="group" aria-label="Filter projects">
+    <button class="btn sm" data-f="all" aria-pressed="true">All</button>
+    <button class="btn sm" data-f="web" aria-pressed="false">Web Design</button>
+    <button class="btn sm" data-f="graphics" aria-pressed="false">Graphics</button>
+    <button class="btn sm" data-f="video" aria-pressed="false">Video Editing</button>
+    <button class="btn sm" data-f="content" aria-pressed="false">Content Creation</button>
+  </div>
+  <div class="grid" id="projects"></div>
+</section>
+
+<!-- 6. SPACE FACTS -->
+<section id="facts" class="sec">
+  <p class="label">Cosmic knowledge</p>
+  <h2>Explore the Universe</h2>
+  <div class="grid" id="fcards"></div>
+  <div class="fbox card"><p id="fact" role="status">Press the button for another space fact.</p><button class="btn pri" id="more">Discover Another Fact</button></div>
+</section>
+
+<!-- 7. PROCESS -->
+<section id="process" class="sec">
+  <p class="label">The creative process</p>
+  <h2>From First Idea to Final Launch</h2>
+  <ol class="tl">
+    <li class="rv"><span class="dot">01</span><h3>Discovery</h3><p>Understand the goal and audience.</p></li>
+    <li class="rv"><span class="dot">02</span><h3>Design</h3><p>Develop the visual direction and structure.</p></li>
+    <li class="rv"><span class="dot">03</span><h3>Creation</h3><p>Build the website or produce the creative content.</p></li>
+    <li class="rv"><span class="dot">04</span><h3>Launch</h3><p>Review the final work and prepare it for delivery.</p></li>
+  </ol>
+</section>
+
+<!-- 8. CONTACT -->
+<section id="contact" class="sec two">
+  <div>
+    <p class="label">Launch a project</p>
+    <h2>Have an Idea? Let's Put It Into Orbit.</h2>
+    <p>Tell me what you're building, the idea you want to share, or the creative problem you want to solve.</p>
+    <div class="clinks" id="clinks"></div>
+  </div>
+  <form id="form" class="card" novalidate>
+    <label for="nm">Name</label><input id="nm" autocomplete="name"><span class="err" id="e-nm"></span>
+    <label for="em">Email</label><input id="em" type="email" autocomplete="email"><span class="err" id="e-em"></span>
+    <label for="tp">Project type</label>
+    <select id="tp"><option value="">Choose one</option><option>Web Design</option><option>Graphic Design</option><option>Video &amp; Reel Editing</option><option>Content Creation</option><option>Something else</option></select><span class="err" id="e-tp"></span>
+    <label for="ms">Message</label><textarea id="ms" rows="5"></textarea><span class="err" id="e-ms"></span>
+    <button class="btn pri" type="submit">Start a Conversation</button>
+    <p class="note" id="status" role="status">This opens your email app with the message ready. Review it there, then press send.</p>
+  </form>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="fgrid">
+    <div><a class="brand" href="#home"><img src="logo.jpg" alt="" width="40" height="40"><span>The Design Loop</span></a><p>Creative ideas. Infinite possibilities.</p></div>
+    <nav aria-label="Footer"><a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a><a href="#facts">Space</a><a href="#process">Process</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Social links" id="flinks"></nav>
+  </div>
+  <p class="copy">&copy; <span id="yr"></span> The Design Loop. <a href="#home">Back to the stars</a></p>
+</footer>
+
+<a class="top" id="top" href="#home" aria-label="Back to top">&uarr;</a>
+<dialog id="dlg" aria-labelledby="dt"></dialog>
+<script src="script.js"></script>
+</body>
+</html>
